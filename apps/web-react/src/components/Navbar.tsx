@@ -77,7 +77,7 @@ const Navbar = ({ onOpen, ...rest }: MobileProps) => {
                   spacing="1px"
                   ml="2"
                 >
-                  <Text fontSize="sm">Justina Clark</Text>
+                  <Text fontSize="sm">Quentin Piot</Text>
                   <Text fontSize="xs" color="gray.600">
                     Admin
                   </Text>

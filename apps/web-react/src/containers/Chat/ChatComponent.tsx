@@ -1,7 +1,21 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Card, Heading } from "@chakra-ui/react";
+import { useChats } from "@/contexts/ChatContext";
 
 const ChatComponent = ({}) => {
-  return <Box flex={1}>bonjour</Box>;
+  const { selectedGroup } = useChats();
+
+  return (
+    <Box flex={1}>
+      <Heading fontSize="2xl">Chats</Heading>
+      <Box mt={6}>
+        {selectedGroup && (
+          <Card bg="white" p={3}>
+            {selectedGroup.name}
+          </Card>
+        )}
+      </Box>
+    </Box>
+  );
 };
 
 export default ChatComponent;

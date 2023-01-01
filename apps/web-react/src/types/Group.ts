@@ -10,6 +10,7 @@ export type GroupDb = {
 export type Group = {
   id: number;
   is_duo: number;
+  name: string;
   created_by: User;
   users: User[];
   messages: Message[];

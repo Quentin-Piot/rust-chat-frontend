@@ -3,18 +3,12 @@ import {
   BoxProps,
   CloseButton,
   Flex,
+  IconButton,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { IconType } from "react-icons";
-import NavItem from "@/components/NavItem";
-
-interface LinkItemProps {
-  name: string;
-  icon: IconType;
-}
-
-const LinkItems: Array<LinkItemProps> = [];
+import GroupList from "@/components/Groups/GroupList";
+import { BiPlus } from "react-icons/all";
 
 interface SidebarProps extends BoxProps {
   onClose: () => void;
@@ -38,11 +32,20 @@ const Sidebar = ({ onClose, ...rest }: SidebarProps) => {
         </Text>
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
-      {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
-          {link.name}
-        </NavItem>
-      ))}
+
+      <Flex flexDirection="column" px={3} mt={6} alignItems="center" w="100%">
+        <Text mb={3} fontSize="md" fontWeight={600} w="100%">
+          Group list
+        </Text>
+        <GroupList />
+        <IconButton
+          aria-label={"add button"}
+          icon={<BiPlus />}
+          rounded="full"
+          mx="auto"
+          mt={2}
+        />
+      </Flex>
     </Box>
   );
 };
