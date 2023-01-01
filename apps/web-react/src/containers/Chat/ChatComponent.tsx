@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 
-const HomepageComponent = ({}) => {
+const ChatComponent = ({}) => {
   return <Box flex={1}>bonjour</Box>;
 };
 
-export default HomepageComponent;
+export default ChatComponent;

@@ -1,9 +1,11 @@
-import Homepage from "@/pages/Homepage";
+import Chat from "@/pages/Chat";
+import { Box } from "@chakra-ui/react";
 
 function App() {
-
   return (
-    <Homepage />
+    <Box w="100vw" h="100vh">
+      <Chat />
+    </Box>
   );
 }
 
